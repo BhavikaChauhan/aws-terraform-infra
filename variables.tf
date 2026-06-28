@@ -65,3 +65,9 @@ variable "allowed_ssh_cidr" {
   type        = string
   default     = "0.0.0.0/0"  # Restrict to your IP in production!
 }
+
+variable "ecr_repo_name" {
+  description = "ECR repository name"
+  type        = string
+  default     = "nodejs-cicd-app"
+}

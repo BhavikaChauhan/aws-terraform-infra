@@ -8,16 +8,13 @@ terraform {
     }
   }
 
-  # Remote state in S3 + DynamoDB locking
-  # Uncomment after running scripts/bootstrap-state.sh
-  # backend "s3" {
-  #   bucket         = "your-tfstate-bucket-name"
-  #   key            = "infra/terraform.tfstate"
-  #   region         = "ap-south-1"
-  #   dynamodb_table = "terraform-state-lock"
-  #   encrypt        = true
-  # }
-}
+ backend "s3" {
+    bucket         = "YOUR_BUCKET_NAME_FROM_BOOTSTRAP"
+    key            = "infra/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "terraform-state-lock"
+    encrypt        = true
+  }
 
 provider "aws" {
   region = var.aws_region

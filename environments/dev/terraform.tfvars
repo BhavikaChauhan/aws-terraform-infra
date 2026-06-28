@@ -10,8 +10,9 @@ public_subnet_cidrs  = ["10.0.1.0/24"]
 private_subnet_cidrs = ["10.0.10.0/24"]
 
 # Free tier instance
-instance_type = "t2.micro"
+instance_type = "t3.micro"
 key_name      = "myapp-dev-key"
+ecr_repo_name = "nodejs-cicd-app"
 
 # Allow SSH from anywhere in dev (restrict in prod!)
 allowed_ssh_cidr = "0.0.0.0/0"

@@ -1,6 +1,6 @@
 # ── Dev Environment ────────────────────────────────────────────
 # Cheapest config — single AZ, smallest instance, no NAT
-project_name = "myapp"
+project_name = "devops-demo"
 environment  = "dev"
 aws_region   = "ap-south-1"
 
@@ -11,7 +11,7 @@ private_subnet_cidrs = ["10.0.10.0/24"]
 
 # Free tier instance
 instance_type = "t3.micro"
-key_name      = "myapp-dev-key"
+key_name      = "nodejscicd"
 ecr_repo_name = "nodejs-cicd-app"
 
 # Allow SSH from anywhere in dev (restrict in prod!)

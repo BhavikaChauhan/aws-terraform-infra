@@ -48,3 +48,8 @@ output "environment_summary" {
     s3_bucket    = module.s3.bucket_name
   }
 }
+
+output "ecr_repository_url" {
+  description = "ECR repository URL for Docker push"
+  value       = module.ecr.repository_url
+}

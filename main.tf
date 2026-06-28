@@ -79,6 +79,14 @@ module "ec2" {
   depends_on = [module.vpc, module.security_groups, module.iam]
 }
 
+# ── ECR ────────────────────────────────────────────────────────
+module "ecr" {
+  source       = "./modules/ecr"
+  project_name = var.project_name
+  environment  = var.environment
+  repo_name    = var.ecr_repo_name
+}
+
 # ── S3 ─────────────────────────────────────────────────────────
 module "s3" {
   source = "./modules/s3"

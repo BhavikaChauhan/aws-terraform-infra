@@ -1,6 +1,6 @@
 # ── Staging Environment ────────────────────────────────────────
 # Mirrors prod — catches issues before they hit real users
-project_name = "myapp"
+project_name = "devops-demo"
 environment  = "staging"
 aws_region   = "ap-south-1"
 
@@ -11,7 +11,7 @@ private_subnet_cidrs = ["10.1.10.0/24", "10.1.11.0/24"]
 vpc_cidr             = "10.1.0.0/16"
 
 instance_type = "t3.micro"
-key_name      = "myapp-staging-key"
+key_name      = "nodejscicd"
 ecr_repo_name = "nodejs-cicd-app"
 
 allowed_ssh_cidr = "0.0.0.0/0"

@@ -8,12 +8,7 @@ terraform {
     }
   }
 
- backend "s3" {
-    bucket         = "YOUR_BUCKET_NAME_FROM_BOOTSTRAP"
-    key            = "infra/terraform.tfstate"
-    region         = "ap-south-1"
-    dynamodb_table = "terraform-state-lock"
-    encrypt        = true
+ backend "s3" 
   }
 
 provider "aws" {
